@@ -119,8 +119,8 @@ background-size: 10px 10px;
 <body>
     <div class="container">
         <div id="newtask">
-            <input type="text" placeholder="Cosa devi fare?">
-            <button id="push">invio</button>
+            <input type="text" placeholder="Task to be done...">
+            <button id="push">Add</button>
         </div>
 
         <div id="tasks"></div>
@@ -129,7 +129,7 @@ background-size: 10px 10px;
     <script type="text/javascript">
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
-        alert("Non hai scritto nulla, inserisci qualcosa")
+        alert("Please enter a task")
     }
     else{
         document.querySelector('#tasks').innerHTML += `

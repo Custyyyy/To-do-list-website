@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  
-  
+    <meta name="viewport" content="width=device-width">
     <title>To do list</title>
     <link rel="shortcut icon" type="image/png" href="https://media.discordapp.net/attachments/808121726876647484/928297751438053376/flaticon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +74,7 @@ background-size: 10px 10px;
     cursor: pointer;
     outline: none;
 }
+
 #tasks{
     background-color: #ffffff;
     padding: 30px 20px;
@@ -114,13 +114,23 @@ background-size: 10px 10px;
 .completed{
     text-decoration: line-through;
 }
+
+::-moz-selection { 
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
     </style>
 </head>
 <body>
     <div class="container">
         <div id="newtask">
-            <input type="text" placeholder="Task to be done...">
-            <button id="push">Add</button>
+            <input type="text" placeholder="Cosa devi fare?">
+            <button id="push">invio</button>
         </div>
 
         <div id="tasks"></div>
@@ -129,7 +139,7 @@ background-size: 10px 10px;
     <script type="text/javascript">
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
-        alert("Please enter a task")
+        alert("Non hai scritto nulla, inserisci qualcosa")
     }
     else{
         document.querySelector('#tasks').innerHTML += `
@@ -156,10 +166,10 @@ document.querySelector('#push').onclick = function(){
     }
 }
     </script>
-	
+    
     <!--Personalize it with your name or delete it-->
     <footer>
-        <div style="font-family: space grotesk; text-align: center; background-color: white;">Made with ♥ by Custy</div>
+        <div style="font-family: space grotesk; text-align: center; background-color: white;">Made with ♥ by <a href="https://github.com/Custyyyy" title="Visit my Github page" style="cursor: alias; text-decoration: none; color: black;";><strong>Custy</strong></a></div>
     </footer>
 </body>
 </html>
